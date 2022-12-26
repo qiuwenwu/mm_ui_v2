@@ -1,0 +1,291 @@
+/* === 基础样式 === */
+
+
+/* 全局变量 */
+/* 
+ * 使用说明
+ * _ 代表自身
+ * -x 代表线框
+ * -伪类名 表示对伪类控制, 例如: table-hover
+ * -数字 表示样式1,样式2
+*/
+:root {
+	/* === 颜色变量 === */
+	/* 基本色 */
+	--color_red: #FF0036;
+	--color_orange: #fca216;
+	--color_yellow: #fcca16;
+	--color_green: #09BB07;
+	--color_cyan: #26d2ff;
+	--color_blue: #38f;
+	--color_purple: #7f39e8;
+
+	--color_black: #373737;
+	--color_white: #fff;
+	--color_grey: #6a737d;
+	--color_light: #F9F9F9;
+	--color_dark: #666;
+
+
+	/* 主题色 */
+	--color_error: #FF0036;
+	--color_error_b: #d10000;
+	--color_error_h: #ff3237;
+	--color_warning: #fca216;
+	--color_warning_b: #ff8200;
+	--color_warning_h: #fca248;
+	--color_success: #09BB07;
+	--color_success_b: #2F9833;
+	--color_success_h: #3bbb39;
+	--color_info: #26d2ff;
+	--color_info_b: #15baf8;
+	--color_info_h: #58e6ff;
+	--color_primary: #38f;
+	--color_primary_b: #317EF3;
+	--color_primary_h: #51a6ff;
+	--color_default: #666;
+	--color_default_b: #444;
+	--color_default_h: #999;
+
+
+	/* 场景色 */
+	--color_base: #373737;
+	--color_title: #000;
+	--color_subtitle: #373737;
+	--color_describe: #666;
+	--color_paragraph: #666;
+	--color_tip: #6a737d;
+	--color_border: #dfe2e5;
+	--color_mask: rgba(0, 0, 0, 0.4);
+	--color_shadow: rgba(7, 17, 27, 0.1);
+
+	--bg_black: #24292e;
+	--bg_grey: #efeff4;
+	--bg_white: #FDFDFD;
+
+	/* === 其他 === */
+	/* 透明度 */
+	--opacity_disabled: 0.7;
+
+	/* 渐变 */
+	--line_red: linear-gradient(135deg, #FF5A6A 0%, #f12f04 100%);
+	--line_yellow: linear-gradient(135deg, rgb(252, 207, 49) 10%, rgb(245, 85, 85) 100%);
+	--line_green: linear-gradient(135deg, rgb(255, 247, 32) 10%, rgb(60, 213, 0) 100%);
+	--line_blue: linear-gradient(135deg, rgb(94, 252, 232) 10%, rgb(115, 110, 254) 100%);
+	--line_purple: linear-gradient(135deg, #EE9AE5 10%, #5961F9 100%);
+
+	--line_red-1: linear-gradient(135deg, #fffddc 0%, #ff4c4c 20%, #fa2aa4 100%);
+	--line_red-2: linear-gradient(135deg, #ffe7dc 0%, #ff7a4c 20%, #fa2a7d 100%);
+	--line_yellow-1: linear-gradient(135deg, #ffe4dc 0%, #faa02a 20%, #ff4c5d 100%);
+	--line_yellow-2: linear-gradient(135deg, #fffadc 0%, #faf32a 20%, #ff7f4c 100%);
+	--line_green-1: linear-gradient(135deg, #dcf9ff 0%, #e8ff4c 20%, #2afac2 100%);
+	--line_green-2: linear-gradient(135deg, #fff7dc 0%, #4cff6e 20%, #46c4fe 100%);
+	--line_blue-1: linear-gradient(135deg, #dcfff9 0%, #2afadf 20%, #4c83ff 100%);
+	--line_blue-2: linear-gradient(135deg, #dcffe0 0%, #2accfa 20%, #b14cff 100%);
+	--line_purple-1: linear-gradient(135deg, #ffe8dc 0%, #ff4cb5 20%, #cc2afa 100%);
+	--line_purple-2: linear-gradient(135deg, #ffe8dc 0%, #ec4cff 20%, #652afa 100%);
+
+	/* === 字体样式 === */
+	--font_family_number: "Helvetica Neue", helvetica;
+	--font_family_text: arial, sans-serif;
+
+	/* === 尺寸 === */
+	/* 常用大小 */
+	--font_mini: 0.75rem;
+	--font_small: 0.875rem;
+	--font_base: 1rem;
+	--font_big: 1.25rem;
+	--font_larger: 1.5rem;
+	--font_huge: 1.75rem;
+
+	/* 场景大小 */
+	--font_title: 1.25rem;
+	--font_subtitle: 1rem;
+	--font_describe: 1rem;
+	--font_paragraph: 1rem;
+	--font_tip: 0.75rem;
+
+	/* 图片尺寸 */
+	--img_size_mini: 1.5rem;
+	--img_size_small: 2rem;
+	--img_size_base: 3.5rem;
+	--img_size_big: 4.5rem;
+	--img_size_larger: 6rem;
+	--img_size_huge: 8rem;
+
+	/* 圆角 */
+	--radius_mini: 0.125rem;
+	--radius_small: 0.25rem;
+	--radius_base: 0.5rem;
+	--radius_big: 1rem;
+	--radius_circle: 50%;
+
+	/* 高度 */
+	--height_mini: 1rem;
+	--height_small: 1.5rem;
+	--height_base: 2rem;
+	--height_big: 2.5rem;
+	--height_larger: 3rem;
+
+	/* === 间隔 === */
+	/* 水平间距 */
+	--row_mini: 0.25rem;
+	--row_small: 0.5rem;
+	--row_base: 1rem;
+	--row_big: 1.25rem;
+	--row_larger: 1.5rem;
+
+	/* 垂直间距 */
+	--col_mini: 0.25rem;
+	--col_small: 0.5rem;
+	--col_base: 1rem;
+	--col_big: 1.25rem;
+	--col_larger: 1.5rem;
+
+	/* 填充 */
+	--padding_mini: 0.25rem;
+	--padding_small: 0.5rem;
+	--padding_base: 1rem;
+	--padding_big: 1.25rem;
+	--padding_larger: 1.5rem;
+	--padding_huge: 2rem;
+
+	/* 边距 */
+	--margin_mini: 0.25rem;
+	--margin_small: 0.5rem;
+	--margin_base: 1rem;
+	--margin_big: 1.25rem;
+	--margin_larger: 1.5rem;
+	--margin_huge: 2rem;
+
+	--x1: 0.125rem;
+	--x2: 0.25rem;
+	--x3: 0.325rem;
+	--x4: 0.5rem;
+	--x5: 0.625rem;
+	--x6: 0.75rem;
+	--x7: 0.875rem;
+	--x8: 1rem;
+	--x10: 1.25rem;
+	--x12: 1.5rem;
+	--x14: 1.75rem;
+	--x16: 2rem;
+	--x20: 2.5rem;
+	--x24: 3rem;
+	--x32: 4rem;
+	--x40: 5rem;
+}
+
+:focus {
+	outline: 0 auto 0;
+}
+
+/* 隐性元素 */
+::-webkit-datetime-edit-year-field {
+	color: #38f;
+}
+
+::-webkit-datetime-edit-month-field {
+	color: #26d2ff;
+}
+
+::-webkit-datetime-edit-day-field {
+	color: #04BE02;
+}
+
+::-webkit-inner-spin-button {
+	visibility: hidden;
+}
+
+::-webkit-calendar-picker-indicator {
+	background-color: #eee;
+	background-image: 0;
+	border: 1px solid rgba(125, 125, 125, 0.25);
+	border-radius: 0.25rem;
+	box-shadow: inset 0 1px #fff, 0 1px #eee;
+	color: #666;
+}
+
+::-webkit-file-upload-button {
+	-webkit-appearance: button;
+	font: inherit;
+}
+
+@media (min-width: 576px) {
+	::-webkit-scrollbar-track-piece {
+		background-color: #f8f8f8;
+	}
+
+	/* 滚动条的宽度 */
+	::-webkit-scrollbar {
+		width: .5rem;
+		height: .5rem;
+	}
+
+	/* 滚动条的设置 */
+	::-webkit-scrollbar-thumb {
+		background-color: rgba(0, 0, 0, 0.5);
+		background-clip: padding-box;
+		min-height: 1rem;
+		border-radius: 0.5rem;
+	}
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: rgba(0, 0, 0, 0.25);
+}
+
+/* ===  基础样式  === */
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-overflow-scrolling: touch;
+}
+
+*,
+::before,
+::after {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {
+	font-family: "Helvetica Neue", helvetica, arial, sans-serif;
+}
+
+body {
+	overflow-x: hidden;
+	overflow-y: auto;
+	color: var(--color_base);
+	line-height: 1;
+}
+
+/* ===  内容标签  === */
+svg {
+	overflow: hidden;
+	vertical-align: middle;
+}
+
+template {
+	display: none;
+}
+
+/* ===  媒体标签  === */
+/* 图片 */
+img {
+	border: none;
+	vertical-align: middle;
+}
+
+/* 链接 */
+a {
+	background-color: transparent;
+	color: inherit;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+a:hover,
+a:not([href]) {
+	text-decoration: none;
+}

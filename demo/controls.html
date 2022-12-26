@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>控件</title>
+		<link rel="stylesheet" href="../css/base.css">
+		<link rel="stylesheet" href="../css/common.css">
+		<link rel="stylesheet" href="../css/controls.css">
+		<style>
+			.span:first-child {
+				background-color: red;
+			}
+		
+			.span:nth-child(2) {
+				background-color: yellow;
+			}
+			
+			.span:nth-child(3) {
+				background-color: cyan;
+			}
+			
+			.span:nth-child(4) {
+				background-color: greenyellow;
+			}
+			.span:last-child {
+				background-color: royalblue;
+			}
+			.span {
+				text-align: center;
+			}
+			
+			select,button {
+				height: 2rem !important;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="group">
+			<div class="span">
+				1
+			</div>
+			<div class="span">
+				2
+			</div>
+			<div class="span">
+				3
+			</div>
+		</div>
+		
+		<div class="group">
+			<div class="span">
+				<select name="" id="">
+					<option value="1">选项1</option>
+				</select>
+			</div>
+			<div class="span">
+				<input type="text" placeholder="输入关键词">
+			</div>
+			<div class="span">
+				<button>按钮</button>
+			</div>
+		</div>
+		
+		
+		<div class="group">
+			<div class="span">
+				<input type="text" placeholder="输入关键词">
+			</div>
+			<div class="span">
+				<button>按钮</button>
+			</div>
+		</div>
+	</body>
+</html>
