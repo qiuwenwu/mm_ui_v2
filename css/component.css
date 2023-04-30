@@ -2,47 +2,15 @@
 /**
  * 卡片
  */
-.card {
-	border-radius: var(--radius_small);
-	overflow: hidden;
-}
+.card {border-radius:var(--radius_small);margin:var(--margin_small);}
+.card_head::before,.card_head::after,.card_body::before,.card_body::after,.card_foot::before,.card_foot::after {content:"";display:block;float:none;clear:both;}
+.card_head,.card_body,.card_foot {position:relative;}
+.card-full {margin:var(--margin_small);height:calc(100% - var(--margin_base));}
 
-.arrow,
-.item-arrow [class*=item_] {
-	padding-right: var(--padding_larger) !important;
-}
-
-.arrow::after,
-.item-arrow [class*=item_]::after {
-	position: absolute;
-	right: 1rem;
-	top: calc(50% + 1px);
-	transform: translateY(-50%) rotate(-45deg);
-	content: "";
-	padding: 3px;
-	display: block;
-	border: 1px solid var(--color_default_h);
-	border-width: 0 1px 1px 0;
-	transition: all 0.2s;
-}
-
+.arrow,.item-arrow .item {padding-right:var(--padding_larger) !important;}
+.arrow::after,.item-arrow .item::after {position:absolute;right:1rem;top:calc(50% + 1px);transform:translateY(-50%) rotate(-45deg);content:"";padding:3px;display:block;border:1px solid var(--color_default_h);border-width:0 1px 1px 0;transition:all 0.2s;}
 /* 禁用 */
-.disabled {
-	pointer-events: none;
-	cursor: not-allowed;
-	-webkit-filter: grayscale(100%);
-	filter: grayscale(100%);
-}
-
+.disabled {pointer-events:none;cursor:not-allowed;-webkit-filter:grayscale(100%);filter:grayscale(100%);}
 /* 必填 */
-.required {
-	position: relative;
-}
-
-.required::before {
-	position: absolute;
-	content: "*";
-	color: var(--color_error);
-	left: 0;
-	top: 1rem;
-}
+.required {position:relative;}
+.required::before {position:absolute;content:"*";color:var(--color_error);left:0;top:1rem;}

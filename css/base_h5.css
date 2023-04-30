@@ -1,4 +1,6 @@
 /* === 基础样式 === */
+@font-face {font-family:"Helvetica Neue";font-style:normal;font-weight:400;src:url(../font/HelveticaNeue.eot) format(embedded-opentype),url(../font/HelveticaNeue.woff2) format(woff2),url(../font/HelveticaNeue.woff) format(woff),url(../font/HelveticaNeue.ttf) format(truetype),url(../font/HelveticaNeue.svg) format(svg);}
+
 
 /* 全局变量 */
 /* 
@@ -288,3 +290,69 @@ a:hover,
 a:not([href]) {
 	text-decoration: none;
 }
+
+/* === layout label === */
+article {overflow:hidden;}
+article>header {text-align:center;}
+blockquote {margin:0 0 var(--margin_base);padding:0 var(--padding_base);color:var(--color_grey);border-left:3px solid var(--color_border);}
+address {font-style:normal;line-height:inherit;}
+section {position:relative;}
+main {position:relative;}
+address,article,aside,code,figcaption,hgroup,main,nav,section,iframe,frame,form,pre {display:block;}
+header::before,header::after,footer::before,footer::after,frame::before,frame::after,iframe::before,iframe::after,code::before,code::after,address::before,address::after,section::before,section::after {clear:both;content:"";display:block;}
+article::before,article::after {content:"";display:block;clear:both;}
+form::before,form::after {content:"";display:block;clear:both;}
+code {padding:var(--padding_small);}
+table {border:1px solid var(--color_border);border-collapse:collapse;border-radius:var(--radius_small);width:100%;border-spacing:0;}
+nav {white-space:nowrap;}
+
+/* === List class === */
+dt {display:block;clear:left;float:left;font-weight:400;padding:var(--padding_small);min-width:7rem;position:relative;}
+dt>span,dd>span {line-height:var(--height_base);}
+dd {display:block;padding:var(--padding_small);float:left;}
+li {position:relative;}
+ul {display:block;padding-left:1.25rem;}
+dl {display:block;}
+dl::before,dl::after,ul::before,ul::after,ol::before,ol::after {content:"";display:block;float:none;clear:both;}
+ol {padding-left:1.25rem;padding-right:var(--padding_base);}
+th {border:1px solid var(--color_border);padding:var(--padding_small) .75rem;text-align:inherit;}
+thead th>span {line-height:var(--height_base);}
+thead th {border-bottom:2px solid var(--color_border);vertical-align:bottom;}
+td {border:1px solid var(--color_border);padding:var(--padding_small) .75rem;white-space:nowrap;}
+
+/* === Content Tags === */
+sub,sup {line-height:0;position:relative;vertical-align:baseline;}
+sub {bottom:-0.25em;}
+sup {top:-0.5em;}
+hr {box-sizing:content-box;height:0;overflow:visible;}
+svg {overflow:hidden;vertical-align:middle;}
+output {display:inline-block;}
+summary {cursor:pointer;}
+template {display:none;}
+abbr[title],abbr[data-original-title] {border-bottom:0;cursor:help;text-decoration:underline dotted;text-decoration-skip-ink:none;}
+
+/* === font size === */
+h1,.h1 {font-size:var(--font_huge);}
+h2,.h2 {font-size:var(--font_larger);}
+h3,.h3 {font-size:var(--font_big);}
+h4,.h4 {font-size:var(--font_base);}
+h5,.h5 {font-size:var(--font_small);}
+h6,.h6 {font-size:var(--font_mini);}
+h1,.h1,h2,.h2 {font-weight:600;}
+h3,.h3,h4,.h4,h5,.h5,h6,.h6 {font-weight:550;}
+small,.font-sm {font-size:75% !important;}
+big,.font-bg {font-size:125% !important;}
+
+/* === media tag === */
+/* Picture frame */
+figure {position:relative;overflow:hidden;display:block;background:center center no-repeat;background-size:100%;}
+figure img {width:100%;display:block;}
+/* image description */
+figcaption {display:block;}
+figure~div {overflow:hidden;}
+
+/* article spacing */
+section h1,section h2,section h3,section h4,section h5 {margin-top:1rem;margin-bottom:.5rem;}
+section p,section blockquote {margin-bottom:1rem;}
+section blockquote>* {margin-bottom:0;}
+section h1,section h2,section h3 {padding-bottom:.25rem;border-bottom:1px solid var(--color_border);}
